@@ -16,7 +16,7 @@ var sayilar = [45,856,12.5,63,0.02,154,2,54,78,61.7,654,26,12.5,63,969,152,32,31
 function KareninAlani(kenaruzunlugu){
 	return kenaruzunlugu*kenaruzunlugu;
 }
-
+console.log(KareninAlani(10));
 /* (Oto test yok) Yukarıdaki KareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
 
@@ -29,10 +29,10 @@ function KareninAlani(kenaruzunlugu){
 			4. Hesaplanan çemberin çevresi döndürülecektir.
 		*/
 
-function CemberinCevresi(/* kodlar buraya */){
-	/* kodlar buraya */
+function CemberinCevresi(yaricap){
+	return yaricap*pi*2
 }
-
+console.log(CemberinCevresi(3));
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -47,10 +47,10 @@ function CemberinCevresi(/* kodlar buraya */){
 			4. Hesaplanan çemberin alanı döndürülecektir.
 		*/
 		
-function CemberinAlani(/* kodlar buraya */){
-	/* kodlar buraya */
+function CemberinAlani(yaricap){
+	return Math.pow(yaricap, 2)*pi
 }
-
+console.log(CemberinAlani(3));
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -77,32 +77,52 @@ function CemberinAlani(/* kodlar buraya */){
 	
 	//3a çözümü
 
-	/* kodlar buraya */
+let	buyukSayi = sayilar[0];
+	for (let s=0; s<sayilar.length;s++){
+		if (sayilar[s]>buyukSayi){
+			buyukSayi = sayilar[s];
+		}
+	}
+	console.log(buyukSayi);
 	
-	
-	
+	 let kucukSayi = sayilar[0];
+	for (let s=0; s<sayilar.length;s++){
+		if (sayilar[s]<kucukSayi){
+			kucukSayi = sayilar[s];
+		}
+	}
+	console.log(kucukSayi);
 	// 3b çözümü:
-
-	/* kodlar buraya */
-		
+var ucetambolunenler= [];
+	sayilar.forEach(function (sayi){
+		if (sayi % 3 ==0){
+			return ucetambolunenler.push(sayi)
+		}
+	})
+		console.log(ucetambolunenler);
 		
 		
 	//3c çözümü:
 	
-	/* kodlar buraya */
-
+	
 	
 	
 	//3d çözümü
 	
-	/* kodlar buraya */
-
+	besyuzdenkucuksayilar =	sayilar.filter(function(sayi){
+		if(sayi <500 ){
+			return sayi
+		}
+	})
+console.log(besyuzdenkucuksayilar);
 
 
 	//3e çözümü
 
-	/* kodlar buraya */
-	
+	siralisayilar = sayilar.sort(function(a, b){
+		return(a-b)
+	})
+	console.log(siralisayilar);
 	
 	//3f çözümü
 	
